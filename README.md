@@ -23,7 +23,7 @@ After downloading, move the file to `src/storage`, so that the application can e
 You can also define the amount of data you want to retrieve.
 
 ```js
-const planetsDataChunk = await fetchCSVDataInMemoryStream(40)
+const planetsDataChunk = await fetchCSVDataInMemoryStream(40) // Quantity of planets to verify
 ```
 
 This file you can be found at: [File](src/stages/extraction/planets-extraction-stage-stream.ts)
@@ -34,7 +34,7 @@ After completing all of these steps, run the following command.
 npm install
 
 # run the script
-npm run start
+npm run start:pipeline
 ```
 
 ## Features
@@ -42,6 +42,6 @@ npm run start
 - [x] Pulls data from exoplanets into NASA
 - [x] Transforms the data to be loaded into our database
 - [x] Creates different types of data fetchers based on the variety of ways the NASA platform can get the same data
-- [ ] Creates a database to load the data
-- [ ] Configures Prisma to connect to the database
-- [ ] Configures a bash command to check if the script has already been run
+- [x] Creates a database to load the data
+- [x] Configures Prisma to connect to the database
+- [x] Configures a bash command to check if the script has already been run
