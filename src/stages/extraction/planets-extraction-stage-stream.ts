@@ -11,7 +11,7 @@ export class PlanetsExtractionStageStream extends Readable {
     try {
       const { fetchCSVDataInMemoryStream } = FetchDataFactory.createInstance()
       // const planetsDataChunk = await fetchDataFromApi(process.env.NASA_URL)
-      const planetsDataChunk = await fetchCSVDataInMemoryStream(40)
+      const planetsDataChunk = await fetchCSVDataInMemoryStream(100)
 
       for (const planetChunk of JSON.parse(planetsDataChunk)) {
         this.push(Buffer.from(JSON.stringify(planetChunk)))
